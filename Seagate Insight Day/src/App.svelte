@@ -3,7 +3,9 @@
 let value1=$state(0);
 let value2=$state(0);
 
-
+function doSomeMaths(x:number,y:number) {
+  return x**2+y;
+}
 </script>
 
 <main>
@@ -27,7 +29,7 @@ let value2=$state(0);
       <div><input type="number" name="Input 2" id="input2" bind:value={value2}></div>
     </div>
     <div class="outputs-container">
-      <span> Output: {value1+value2}</span>
+      <span> Output: {doSomeMaths(value1, value2)}</span>
     </div>
   </section>
 </article>
