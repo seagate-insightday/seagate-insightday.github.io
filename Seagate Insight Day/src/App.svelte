@@ -8,7 +8,7 @@ let value2=$state(0);
 
 <main>
 <nav>
-<img src="" alt="Seagate Logo">
+<img class="seagate-logo" src="/src/assets/seagate_horizontal.png" alt="Seagate Logo">
   <h1>
     DoE Interactive Task - Challenge 1 
   </h1>
