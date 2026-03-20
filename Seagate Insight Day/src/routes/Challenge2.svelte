@@ -27,8 +27,8 @@
             <input
             type="number"
             id="input1"
-            min={5}
-            max={25}
+            min="5"
+            max="25"
             bind:value={value1}
             class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate outline-none transition-colors"
             />
@@ -39,8 +39,8 @@
             <input
             type="number"
             id="input2"
-            min={30}
-            max={120}
+            min="30"
+            max="120"
             bind:value={value2}
             class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate outline-none transition-colors"
             />
