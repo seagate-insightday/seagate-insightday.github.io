@@ -13,6 +13,8 @@
         class="h-8 mr-3 lg:h-10"
         src="/seagate_horizontal_smaller.png"
         alt="Seagate Logo"
+        width="400"
+        height="134"
     />
     
     </a>

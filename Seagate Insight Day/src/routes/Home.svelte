@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-    import heroImg from "../assets/Innovation_8.jpg";
+    import heroImg from "../assets/Innovation_8.jpg?enhanced";
 </script>
 
 <main class="grow w-full hero-grid">
@@ -25,7 +25,7 @@
 
     </section>
     <section class="">
-        <enhanced:img src={heroImg} alt="An engineer uses a magnifying lens to inspect machinery." class="h-full w-full object-cover hero-image" />
+        <enhanced:img src={heroImg} alt="An engineer uses a magnifying lens to inspect machinery." class="h-full w-full object-cover hero-image" fetchpriority="high" />
     </section>
 </main>
 
