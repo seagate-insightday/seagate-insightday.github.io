@@ -1,11 +1,15 @@
 <script lang="ts">
 	import '../app.css';
  
-	let value1 = $state(0);
-	let value2 = $state(0);
+	let value1 = $state(5);
+	let value2 = $state(30);
 
-	function doSomeMaths(x: number, y: number) {
-		return x ** 2 + y;
+	function doSomeMaths(w: number, L: number) {
+        const K = 1;
+        const wc = 10;
+        const Lc = 60;
+
+		return K * ((w * L) / (((1 + w/wc)**2) * ((1 + L/Lc)**2)));
 	}
 </script>
 
@@ -19,27 +23,31 @@
     <section class="bg-surface-overlay p-6 rounded-xl shadow-md">
         <div class="flex flex-col sm:flex-row gap-6 mb-6">
         <div class="flex-1">
-            <label for="input1" class="block font-medium mb-2 text-primary">Input 1</label>
+            <label for="input1" class="block font-medium mb-2 text-primary">Width (nm)</label>
             <input
             type="number"
             id="input1"
+            min={5}
+            max={25}
             bind:value={value1}
             class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate outline-none transition-colors"
             />
         </div>
 
         <div class="flex-1">
-            <label for="input2" class="block font-medium mb-2 text-primary">Input 2</label>
+            <label for="input2" class="block font-medium mb-2 text-primary">Length (nm)</label>
             <input
             type="number"
             id="input2"
+            min={30}
+            max={120}
             bind:value={value2}
             class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate outline-none transition-colors"
             />
         </div>
         </div>
 
-        <span class="block font-medium text-primary">Output</span> 
+        <span class="block font-medium text-primary">Normalised P<sub>SDSC</sub></span> 
         <div class="output-box text-xl font-bold bg-seagate p-4 rounded-lg text-center">
             <span class="text-white ml-1">{doSomeMaths(value1, value2)}</span>
         </div>
