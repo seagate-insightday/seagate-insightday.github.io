@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@fontsource-variable/unbounded": "^5.2.8",
-    "@fontsource/poppins": "^5.2.7"
+    "@fontsource/poppins": "^5.2.7",
+    "svelte-spa-router": "^5.0.0"
   }
 }
