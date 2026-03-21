@@ -1,15 +1,22 @@
 <script lang="ts">
 	import '../app.css';
  
-	let value1 = $state(5);
-	let value2 = $state(30);
+	let width_value = $state(5);
+	let length_value = $state(30);
+    const width_min = 5;
+    const width_max = 25;
+    const length_min = 30;
+    const length_max = 120;
 
-	function doSomeMaths(w: number, L: number) {
+	function doSomeMaths(w: number, L: number): string {
+        if (w < width_min || w > width_max) return "Parameter out of range";
+        if (L < length_min || L > length_max) return "Parameter out of range";
         const K = 1;
         const wc = 10;
         const Lc = 60;
 
-		return K * ((w * L) / (((1 + w/wc)**2) * ((1 + L/Lc)**2)));
+        let result = K * ((w * L) / (((1 + w/wc)**2) * ((1 + L/Lc)**2)))
+		return result.toString();
 	}
 </script>
 
@@ -27,11 +34,16 @@
             <input
             type="number"
             id="input1"
-            min="5"
-            max="25"
-            bind:value={value1}
-            class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate outline-none transition-colors"
+            min={width_min}
+            max={width_max}
+            bind:value={width_value}
+            class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate invalid:border-red-900! outline-none transition-colors"
             />
+            <div class="input-range text-sm flex flex-row justify-around px-4 text-secondary mt-1">
+                <span>{width_min}</span>
+                <span>-</span>
+                <span>{width_max}</span>
+            </div>
         </div>
 
         <div class="flex-1">
@@ -39,17 +51,22 @@
             <input
             type="number"
             id="input2"
-            min="30"
-            max="120"
-            bind:value={value2}
-            class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate outline-none transition-colors"
+            min={length_min}
+            max={length_max}
+            bind:value={length_value}
+            class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate invalid:border-red-900! outline-none transition-colors"
             />
+            <div class="input-range text-sm flex flex-row justify-around px-4 text-secondary mt-1">
+                <span>{length_min}</span>
+                <span>-</span>
+                <span>{length_max}</span>
+            </div>
         </div>
         </div>
 
         <span class="block font-medium text-primary">Normalised P<sub>SDSC</sub></span> 
         <div class="output-box text-xl font-bold bg-seagate p-4 rounded-lg text-center">
-            <span class="text-white ml-1">{doSomeMaths(value1, value2)}</span>
+            <span class="text-white ml-1">{doSomeMaths(width_value, length_value)}</span>
         </div>
     </section>
 </main>

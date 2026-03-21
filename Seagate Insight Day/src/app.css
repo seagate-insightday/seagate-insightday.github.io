@@ -11,13 +11,13 @@
 	--color-seagate: #6ebe49;
 	--color-seagate-select: oklch(72.524% 0.17166 137.134 / 0.6);
 	--color-navbar-text: white;
-
 	/* themed */
 	--color-surface: var(--surface);
 	--color-surface-overlay: var(--surface-overlay);
 	--color-surface-navbar: var(--surface-navbar);
 	--color-surface-navbar-overlay: var(--surface-navbar-overlay);
 	--color-primary: var(--primary);
+	--color-secondary: var(--secondary);
 }
 
 :root {
@@ -28,6 +28,7 @@
 	--surface-navbar: #242424;
 	--surface-navbar-overlay: oklch(0.36 0 0);
 	--primary: black;
+	--secondary: oklch(35% 0 0);
 	--hero-image-filter: none;
 }
 
@@ -38,6 +39,7 @@
 	--surface-navbar: #363636;
 	--surface-navbar-overlay: oklch(0.4 0 0);
 	--primary: white;
+	--secondary: oklch(88% 0 0);
 	--hero-image-filter: contrast(0.833) brightness(0.71);
 }
 
@@ -81,3 +83,20 @@
 .navbar-list ul {
 	@apply bg-surface-navbar;
 }
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type="number"] {
+	appearance: textfield;
+	text-align: center;
+}
+
+.input-range > * {
+	flex: 1;
+}
+.input-range > *:first-child { text-align: left; }
+.input-range > *:nth-child(2) { text-align: center; }
+.input-range > *:last-child { text-align: right; }

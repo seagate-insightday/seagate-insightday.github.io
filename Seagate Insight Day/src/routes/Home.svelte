@@ -32,7 +32,6 @@
 <style>
     .hero-grid {
         display: grid;
-        /* place-items: center; */
         grid-template-columns: repeat(auto-fit, minmax(min(350px, 100vw), 1fr));
     }
 

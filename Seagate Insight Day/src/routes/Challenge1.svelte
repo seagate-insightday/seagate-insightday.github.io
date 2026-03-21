@@ -24,7 +24,7 @@
                 type="number"
                 id="input1"
                 bind:value={value1}
-                class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate outline-none transition-colors"
+                class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate invalid:border-red-900! outline-none transition-colors"
                 />
             </div>
 
@@ -34,7 +34,7 @@
                 type="number"
                 id="input2"
                 bind:value={value2}
-                class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate outline-none transition-colors"
+                class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate invalid:border-red-900! outline-none transition-colors"
                 />
             </div>
         </div>
