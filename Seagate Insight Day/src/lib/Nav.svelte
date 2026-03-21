@@ -24,7 +24,7 @@
     <DarkMode class="text-white dark:text-white bg-transparent hover:bg-surface-navbar-overlay! transition-colors" />
     <NavHamburger />
 </div>
-<NavUl class="ms-auto navbar-list" activeUrl={router.location[0] === "#" ? router.location : "#" + router.location}>
+<NavUl class="ms-auto navbar-list mt-0.5 md:mt-0" activeUrl={router.location[0] === "#" ? router.location : "#" + router.location}>
     <NavLi href="#/" activeClass={activeClass} nonActiveClass={nonActiveClass}>Home</NavLi>
     <NavLi href="#/challenge-1" activeClass={activeClass} nonActiveClass={nonActiveClass}>Challenge 1</NavLi>
     <NavLi href="#/challenge-2" activeClass={activeClass} nonActiveClass={nonActiveClass}>Challenge 2</NavLi>

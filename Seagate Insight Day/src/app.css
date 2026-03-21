@@ -81,7 +81,7 @@
 }
 
 .navbar-list ul {
-	@apply bg-surface-navbar;
+	@apply bg-surface-navbar border-none!;
 }
 
 input[type='number']::-webkit-inner-spin-button, 
