@@ -25,7 +25,7 @@
 
     </section>
     <section class="">
-        <enhanced:img src={heroImg} alt="An engineer uses a magnifying lens to inspect machinery." class="h-full w-full object-cover hero-image" fetchpriority="high" />
+        <enhanced:img src={heroImg} alt="An engineer uses a magnifying lens to inspect machinery." class="h-full w-full object-cover hero-image bg-surface-overlay" fetchpriority="high" />
     </section>
 </main>
 
@@ -37,7 +37,8 @@
     }
 
     .hero-image {
-        filter: contrast(0.833) brightness(0.71);
+        filter: var(--hero-image-filter);
+        transition: filter 0.3s ease-in-out;
     }
 
     .challenges-list li {

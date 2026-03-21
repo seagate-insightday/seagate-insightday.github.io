@@ -11,8 +11,13 @@
 	--color-seagate: #6ebe49;
 	--color-seagate-select: oklch(72.524% 0.17166 137.134 / 0.6);
 	--color-navbar-text: white;
-	--color-surface-navbar-overlay: var(--surface-navbar-overlay);
+
+	/* themed */
+	--color-surface: var(--surface);
+	--color-surface-overlay: var(--surface-overlay);
 	--color-surface-navbar: var(--surface-navbar);
+	--color-surface-navbar-overlay: var(--surface-navbar-overlay);
+	--color-primary: var(--primary);
 }
 
 :root {
@@ -23,6 +28,7 @@
 	--surface-navbar: #242424;
 	--surface-navbar-overlay: oklch(0.36 0 0);
 	--primary: black;
+	--hero-image-filter: none;
 }
 
 .dark {
@@ -32,6 +38,7 @@
 	--surface-navbar: #363636;
 	--surface-navbar-overlay: oklch(0.4 0 0);
 	--primary: white;
+	--hero-image-filter: contrast(0.833) brightness(0.71);
 }
 
 @source "../node_modules/flowbite-svelte/dist";

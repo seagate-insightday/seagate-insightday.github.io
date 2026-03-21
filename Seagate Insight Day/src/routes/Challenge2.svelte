@@ -20,7 +20,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem minima odit explicabo. Cum, sint voluptates. Quos voluptatem explicabo enim, nobis dolores libero culpa aspernatur saepe dicta in inventore! Enim ipsam unde odit praesentium dignissimos, quis optio culpa tempora asperiores. Neque dignissimos vitae incidunt pariatur et repellat accusamus sequi voluptatem ipsa?</p>
     </article>
 
-    <section class="bg-surface-overlay p-6 rounded-xl shadow-md">
+    <section class="bg-surface-overlay p-6 rounded-xl shadow-md w-md max-w-full">
         <div class="flex flex-col sm:flex-row gap-6 mb-6">
         <div class="flex-1">
             <label for="input1" class="block font-medium mb-2 text-primary">Width (nm)</label>
