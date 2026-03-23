@@ -28,6 +28,6 @@
     <NavLi href="#/" activeClass={activeClass} nonActiveClass={nonActiveClass}>Home</NavLi>
     <NavLi href="#/challenge-1" activeClass={activeClass} nonActiveClass={nonActiveClass}>Challenge 1</NavLi>
     <NavLi href="#/challenge-2" activeClass={activeClass} nonActiveClass={nonActiveClass}>Challenge 2</NavLi>
-    <!-- <NavLi href="#/challenge-3" activeClass={activeClass} nonActiveClass={nonActiveClass}>Challenge 3</NavLi> -->
+    <NavLi href="#/challenge-3" activeClass={activeClass} nonActiveClass={nonActiveClass}>Challenge 3</NavLi>
 </NavUl>
 </Navbar>

@@ -100,3 +100,11 @@ input[type="number"] {
 .input-range > *:first-child { text-align: left; }
 .input-range > *:nth-child(2) { text-align: center; }
 .input-range > *:last-child { text-align: right; }
+
+.output-table td {
+	padding: 0 1rem;
+}
+
+.output-table thead td {
+	padding: 0.25rem 1rem;
+}
