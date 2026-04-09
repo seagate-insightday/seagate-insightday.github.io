@@ -1,21 +1,18 @@
 <script lang="ts">
 	import '../app.css';
  
-	let QWThicknessValue = $state(5);
-	let QWAlPercentValue = $state(30);
-    const QWThicknessMin = 5;
-    const QWThicknessMax = 25;
-    const QWAlPercentMin = 30;
-    const QWAlPercentMax = 120;
+	let value = $state(5);
+    const valueMin = 0.5;
+    const valueMax = 10;
 
-	function doSomeMaths(w: number, L: number): string {
-        if (w < QWThicknessMin || w > QWThicknessMax) return "Parameter out of range";
-        if (L < QWAlPercentMin || L > QWAlPercentMax) return "Parameter out of range";
-        const K = 1;
-        const wc = 10;
-        const Lc = 60;
 
-        let result = K * ((w * L) / (((1 + w/wc)**2) * ((1 + L/Lc)**2)));
+	function doSomeMaths(x: number): string {
+        if (x < valueMin || x > valueMax) return "Parameter out of range";
+
+        let result = 0.95 * Math.exp(-(((x - 4.15) ** 2) / (2 * (1.7201 ** 2))));
+        if (value > 4.15) {
+            result = 0.95 * Math.exp(-(((x - 4.15) ** 2) / (2 * (3.8529 ** 2))));
+        }
 		return result.toString();
 	}
 </script>
@@ -29,44 +26,28 @@
 
     <section class="bg-surface-overlay p-6 rounded-xl shadow-md w-md max-w-full">
         <div class="flex flex-col sm:flex-row gap-6 mb-6">
-        <div class="flex-1">
-            <label for="input1" class="block font-medium mb-2 text-primary">Quantum Well Thickness</label>
-            <input
-            type="number"
-            id="input1"
-            min={QWThicknessMin}
-            max={QWThicknessMax}
-            bind:value={QWThicknessValue}
-            class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate invalid:border-red-900! outline-none transition-colors"
-            />
-            <div class="input-range text-sm flex flex-row justify-around px-4 text-secondary mt-1">
-                <span>{QWThicknessMin}</span>
-                <span>-</span>
-                <span>{QWThicknessMax}</span>
+            <div class="flex-1">
+                <label for="input1" class="block font-medium mb-2 text-primary">Coupler Width</label>
+                <input
+                type="number"
+                id="input1"
+                min={valueMin}
+                max={valueMax}
+                step={0.01}
+                bind:value={value}
+                class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate invalid:border-red-900! outline-none transition-colors"
+                />
+                <div class="input-range text-sm flex flex-row justify-around px-4 text-secondary mt-1">
+                    <span>{valueMin}</span>
+                    <span>-</span>
+                    <span>{valueMax}</span>
+                </div>
             </div>
         </div>
 
-        <div class="flex-1">
-            <label for="input2" class="block font-medium mb-2 text-primary">Quantum Well Aluminium Perecntage</label>
-            <input
-            type="number"
-            id="input2"
-            min={QWAlPercentMin}
-            max={QWAlPercentMax}
-            bind:value={QWAlPercentValue}
-            class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate invalid:border-red-900! outline-none transition-colors"
-            />
-            <div class="input-range text-sm flex flex-row justify-around px-4 text-secondary mt-1">
-                <span>{QWAlPercentMin}</span>
-                <span>-</span>
-                <span>{QWAlPercentMax}</span>
-            </div>
-        </div>
-        </div>
-
-        <span class="block font-medium text-primary">Normalised P<sub>SDSC</sub></span> 
+        <span class="block font-medium text-primary">Output</span> 
         <div class="output-box text-xl font-bold bg-seagate p-4 rounded-lg text-center">
-            <span class="text-white ml-1">{doSomeMaths(QWThicknessValue, QWAlPercentValue)}</span>
+            <span class="text-white ml-1">{doSomeMaths(value)}</span>
         </div>
     </section>
 </main>
