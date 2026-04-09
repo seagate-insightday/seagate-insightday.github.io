@@ -18,9 +18,9 @@
             <li>
                 <span>Challenge 2</span><a href="#/challenge-2"><button>Go</button></a>
             </li>
-            <!-- <li>
+            <li>
                 <span>Challenge 3</span><a href="#/challenge-3"><button>Go</button></a>
-            </li> -->
+            </li>
         </ul>
 
     </section>
