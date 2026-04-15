@@ -21,6 +21,9 @@
             <li>
                 <span>Challenge 3</span><a href="#/challenge-3"><button>Go</button></a>
             </li>
+            <li>
+                <span>Challenge 4</span><a href="#/challenge-4"><button>Go</button></a>
+            </li>
         </ul>
 
     </section>

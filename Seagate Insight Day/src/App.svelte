@@ -6,6 +6,7 @@
     import Challenge1 from './routes/Challenge1.svelte';
     import Challenge2 from './routes/Challenge2.svelte';
     import Challenge3 from './routes/Challenge3.svelte';
+    import Challenge4 from './routes/Challenge4.svelte';
     import NotFound from './routes/404.svelte'
 
     const routes = {
@@ -14,6 +15,7 @@
         '/challenge-1': Challenge1,
         '/challenge-2': Challenge2,
         '/challenge-3': Challenge3,
+        '/challenge-4': Challenge4,
         '*': NotFound,
     }
 </script>
