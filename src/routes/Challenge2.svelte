@@ -5,7 +5,7 @@
     const value_min = 0.1;
     const value_max = 1.6;
 
-    const maxOutputs = 5;
+    const maxAttempts = 10;
     let outputs: Array<Array<string>> = $state([]);
 
 	function doSomeMaths() {
@@ -14,7 +14,7 @@
 
         let result = 0.97642 * Math.exp(-((x - 1.2)**2) / (2 * (0.463)**2));
 
-        if (outputs.length >= maxOutputs) return;
+        if (outputs.length >= maxAttempts) return;
 
 		outputs.push(
             [x.toFixed(2), result.toFixed(3)],
@@ -30,7 +30,7 @@
     </article>
 
     <section class="bg-surface-overlay p-6 rounded-xl shadow-md w-md max-w-full">
-        <p class="text-center pb-6">Measurements remaining: <span class="text-seagate">{maxOutputs - outputs.length}</span></p>
+        <p class="text-center pb-6">Measurements remaining: <span class="text-seagate">{maxAttempts - outputs.length}</span></p>
         <form class="flex flex-col mb-6" onsubmit={e => {
             e.preventDefault();
             doSomeMaths();

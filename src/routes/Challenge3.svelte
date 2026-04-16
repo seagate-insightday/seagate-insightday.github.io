@@ -5,7 +5,7 @@
     const value_min = 8;
     const value_max = 35;
 
-    const maxOutputs = 5;
+    const maxAttempts = 10;
     let outputs: Array<Array<string>> = $state([]);
 
 	function doSomeMaths() {
@@ -13,7 +13,7 @@
         if (x < value_min || x > value_max) return; // parameter out of range
 
         let result = (1/0.95) * Math.sin(((2 * Math.PI) / 14.21) * x - (3 * Math.PI) / 2) * Math.exp((Math.log(0.95) / 14.21) * x);
-        if (outputs.length >= maxOutputs) return;
+        if (outputs.length >= maxAttempts) return;
 
 		outputs.push(
             [x.toFixed(2), result.toFixed(3)],
@@ -29,7 +29,7 @@
     </article>
 
     <section class="bg-surface-overlay p-6 rounded-xl shadow-md w-md max-w-full">
-        <p class="text-center pb-6">Measurements remaining: <span class="text-seagate">{maxOutputs - outputs.length}</span></p>
+        <p class="text-center pb-6">Measurements remaining: <span class="text-seagate">{maxAttempts - outputs.length}</span></p>
         <form class="flex flex-col mb-6" onsubmit={e => {
             e.preventDefault();
             doSomeMaths();

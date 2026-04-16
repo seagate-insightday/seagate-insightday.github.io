@@ -5,7 +5,7 @@
     const value_min = 0.5;
     const value_max = 10;
 
-    const maxOutputs = 5;
+    const maxAttempts = 10;
     let outputs: Array<Array<string>> = $state([]);
 
 	function doSomeMaths() {
@@ -17,7 +17,7 @@
             result = 0.95 * Math.exp(-(((x - 4.15) ** 2) / (2 * (3.8529 ** 2))));
         }
 
-        if (outputs.length >= maxOutputs) return;
+        if (outputs.length >= maxAttempts) return;
 
 		outputs.push(
             [x.toFixed(2), result.toFixed(3)],
@@ -32,8 +32,9 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem minima odit explicabo. Cum, sint voluptates. Quos voluptatem explicabo enim, nobis dolores libero culpa aspernatur saepe dicta in inventore! Enim ipsam unde odit praesentium dignissimos, quis optio culpa tempora asperiores. Neque dignissimos vitae incidunt pariatur et repellat accusamus sequi voluptatem ipsa?</p>
     </article>
 
+    <img src="" alt="" width="400" height="300">
     <section class="bg-surface-overlay p-6 rounded-xl shadow-md w-md max-w-full">
-        <p class="text-center pb-6">Measurements remaining: <span class="text-seagate">{maxOutputs - outputs.length}</span></p>
+        <p class="text-center pb-6">Measurements remaining: <span class="text-seagate">{maxAttempts - outputs.length}</span></p>
         <form class="flex flex-col mb-6" onsubmit={e => {
             e.preventDefault();
             doSomeMaths();

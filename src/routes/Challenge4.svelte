@@ -8,7 +8,7 @@
     const length_min = 30;
     const length_max = 120;
 
-    const maxOutputs = 5;
+    const maxAttempts = 10;
     let outputs: Array<Array<string>> = $state([]);
 
 	function doSomeMaths() {
@@ -20,7 +20,7 @@
         const Lc = 60;
 
         let result = K * ((w * L) / (((1 + w/wc)**2) * ((1 + L/Lc)**2)));
-        if (outputs.length >= maxOutputs) return;
+        if (outputs.length >= maxAttempts) return;
 
 		outputs.push(
             [w.toFixed(2), L.toFixed(2), result.toFixed(2)]
@@ -36,7 +36,7 @@
     </article>
 
     <section class="bg-surface-overlay p-6 rounded-xl shadow-md w-md max-w-full">
-        <p class="text-center pb-6">Measurements remaining: <span class="text-seagate">{maxOutputs - outputs.length}</span></p>
+        <p class="text-center pb-6">Measurements remaining: <span class="text-seagate">{maxAttempts - outputs.length}</span></p>
         <form class="flex flex-col mb-6" onsubmit={e => {
             e.preventDefault();
             doSomeMaths();
