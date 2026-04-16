@@ -29,10 +29,11 @@
 </script>
 
 <main class="grow p-6 max-w-4xl mx-auto w-full flex flex-col items-center justify-center gap-6">
-    <h1 class="text-3xl mb-6 mt-4">Challenge 4</h1>
+    <h1 class="text-3xl mb-6 mt-4">Challenge – Plasmonic Disc</h1>
 
-    <article class="space-y-8 text-justify">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem minima odit explicabo. Cum, sint voluptates. Quos voluptatem explicabo enim, nobis dolores libero culpa aspernatur saepe dicta in inventore! Enim ipsam unde odit praesentium dignissimos, quis optio culpa tempora asperiores. Neque dignissimos vitae incidunt pariatur et repellat accusamus sequi voluptatem ipsa?</p>
+    <article class="space-y-8 text-center">
+        <img src="" alt="" width="400" height="300" class="bg-surface-overlay mx-auto">
+        <p>Confines the light to subwavelength dimensions.</p>
     </article>
 
     <section class="bg-surface-overlay p-6 rounded-xl shadow-md w-md max-w-full">
@@ -80,17 +81,13 @@
             <button type="submit" class="text-xl font-bold bg-seagate p-4 rounded-lg text-center">Measure</button>
         </form>
 
-        <!-- <span class="block font-medium text-primary">Normalised P<sub>SDSC</sub></span> 
-        <div class="output-box text-xl font-bold bg-seagate p-4 rounded-lg text-center">
-            <span class="text-white ml-1">{"Output"}</span>
-        </div> -->
     </section>
     <table class="output-table text-center">
         <thead>
             <tr class="border-y-2 border-surface-overlay">
                 <td>Width</td>
                 <td>Length</td>
-                <td>Normalised P<sub>SDSC</sub></td>
+                <td>Normalised P<sub>disc</sub></td>
             </tr>
         </thead>
         <tbody>

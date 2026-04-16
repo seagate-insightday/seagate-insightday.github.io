@@ -13,16 +13,16 @@
         </p>
         <ul class="flex flex-col gap-2 challenges-list">
             <li>
-                <span>Challenge 1</span><a href="#/challenge-1"><button>Go</button></a>
+                <span>Coupler Width</span><a href="#/challenge-1"><button>Go</button></a>
             </li>
             <li>
-                <span>Challenge 2</span><a href="#/challenge-2"><button>Go</button></a>
+                <span>Coupler Thickness</span><a href="#/challenge-2"><button>Go</button></a>
             </li>
             <li>
-                <span>Challenge 3</span><a href="#/challenge-3"><button>Go</button></a>
+                <span>Mode Converter</span><a href="#/challenge-3"><button>Go</button></a>
             </li>
             <li>
-                <span>Challenge 4</span><a href="#/challenge-4"><button>Go</button></a>
+                <span>Challenge – Plasmonic Disc</span><a href="#/challenge-4"><button>Go</button></a>
             </li>
         </ul>
 

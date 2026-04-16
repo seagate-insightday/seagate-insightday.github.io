@@ -26,9 +26,9 @@
 </div>
 <NavUl class="ms-auto navbar-list mt-0.5 md:mt-0" activeUrl={router.location[0] === "#" ? router.location : "#" + router.location}>
     <NavLi href="#/" activeClass={activeClass} nonActiveClass={nonActiveClass}>Home</NavLi>
-    <NavLi href="#/challenge-1" activeClass={activeClass} nonActiveClass={nonActiveClass}>Challenge 1</NavLi>
-    <NavLi href="#/challenge-2" activeClass={activeClass} nonActiveClass={nonActiveClass}>Challenge 2</NavLi>
-    <NavLi href="#/challenge-3" activeClass={activeClass} nonActiveClass={nonActiveClass}>Challenge 3</NavLi>
-    <NavLi href="#/challenge-4" activeClass={activeClass} nonActiveClass={nonActiveClass}>Challenge 4</NavLi>
+    <NavLi href="#/challenge-1" activeClass={activeClass} nonActiveClass={nonActiveClass}>Coupler Width</NavLi>
+    <NavLi href="#/challenge-2" activeClass={activeClass} nonActiveClass={nonActiveClass}>Coupler Thickness</NavLi>
+    <NavLi href="#/challenge-3" activeClass={activeClass} nonActiveClass={nonActiveClass}>Mode Converter</NavLi>
+    <NavLi href="#/challenge-4" activeClass={activeClass} nonActiveClass={nonActiveClass}>Plasmonic Disc</NavLi>
 </NavUl>
 </Navbar>

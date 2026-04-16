@@ -23,10 +23,11 @@
 </script>
 
 <main class="grow p-6 max-w-4xl mx-auto w-full flex flex-col items-center justify-center gap-6">
-    <h1 class="text-3xl mb-6 mt-4">Challenge 1</h1>
+    <h1 class="text-3xl mb-6 mt-4">Challenge – Coupler Thickness</h1>
 
-    <article class="space-y-8 text-justify">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem minima odit explicabo. Cum, sint voluptates. Quos voluptatem explicabo enim, nobis dolores libero culpa aspernatur saepe dicta in inventore! Enim ipsam unde odit praesentium dignissimos, quis optio culpa tempora asperiores. Neque dignissimos vitae incidunt pariatur et repellat accusamus sequi voluptatem ipsa?</p>
+    <article class="space-y-8 text-center">
+        <img src="" alt="" width="400" height="300" class="bg-surface-overlay mx-auto">
+        <p>Gathers light from the laser.</p>
     </article>
 
     <section class="bg-surface-overlay p-6 rounded-xl shadow-md w-md max-w-full">
