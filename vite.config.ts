@@ -5,4 +5,10 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import preload from 'vite-plugin-preload';
 
 // https://vite.dev/config/
-export default defineConfig({ plugins: [tailwindcss(), enhancedImages(), svelte(), preload()] });
+export default defineConfig({
+    plugins: [tailwindcss(), enhancedImages(), svelte(), preload()] ,
+    build: {
+        outDir: 'docs',
+        emptyOutDir: true,
+    },
+});
