@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+    import logoImage from '../assets/disc.png?enhanced';
  
 	let value = $state(5);
     const value_min = 0.5;
@@ -29,7 +30,7 @@
     <h1 class="text-3xl mb-6 mt-4">Challenge – Coupler Width</h1>
 
     <article class="space-y-8 text-center">
-        <img src="" alt="" width="400" height="300" class="bg-surface-overlay mx-auto">
+        <enhanced:img src={logoImage} alt="" width="400" height="300" class="bg-surface-overlay mx-auto" />
         <p>Gathers light from the laser.</p>
     </article>
 

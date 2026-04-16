@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
- 
+    import discImage from '../assets/disc.png?enhanced';
 	let width_value = $state(5);
 	let length_value = $state(30);
     const width_min = 5;
@@ -32,7 +32,7 @@
     <h1 class="text-3xl mb-6 mt-4">Challenge – Plasmonic Disc</h1>
 
     <article class="space-y-8 text-center">
-        <img src="" alt="" width="400" height="300" class="bg-surface-overlay mx-auto">
+        <enhanced:img src={discImage} alt="" width="400" height="152" class="bg-surface-overlay mx-auto"/>
         <p>Confines the light to subwavelength dimensions.</p>
     </article>
 
