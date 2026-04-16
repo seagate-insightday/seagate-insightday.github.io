@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+    import couplerImage from '../assets/coupler.png?enhanced';
  
 	let value = $state(1);
     const value_min = 0.1;
@@ -26,7 +27,7 @@
     <h1 class="text-3xl mb-6 mt-4">Challenge – Coupler Thickness</h1>
 
     <article class="space-y-8 text-center">
-        <img src="" alt="" width="400" height="300" class="bg-surface-overlay mx-auto">
+        <enhanced:img src={couplerImage} alt="" width="400" height="266" class="bg-surface-overlay mx-auto" />
         <p>Gathers light from the laser.</p>
     </article>
 

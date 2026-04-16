@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+    import modeConverterImage from '../assets/mode_converter.png?enhanced';
  
 	let value = $state(20);
     const value_min = 8;
@@ -25,7 +26,7 @@
     <h1 class="text-3xl mb-6 mt-4">Challenge – Mode Converter</h1>
 
     <article class="space-y-8 text-center">
-        <img src="" alt="" width="400" height="300" class="bg-surface-overlay mx-auto">
+        <enhanced:img src={modeConverterImage} alt="" width="400" height="266" class="bg-surface-overlay mx-auto" />
         <p>Takes the light from the laser and converts the shape.</p>
     </article>
 
