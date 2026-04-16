@@ -6,10 +6,8 @@
 <main class="grow w-full hero-grid">
     <section class="flex flex-col items-center justify-center p-6 md:p-10 gap-10 max-w-2xl mx-auto">
         <h1 class="text-3xl">DoE Interactive Task</h1>
-        <p class="text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            <br>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        <p class="text-center">
+            Challenge: Optimise each of the photonic components to get the maximum output.
         </p>
         <ul class="flex flex-col gap-2 challenges-list">
             <li>
