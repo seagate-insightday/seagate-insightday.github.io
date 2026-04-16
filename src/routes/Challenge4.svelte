@@ -32,12 +32,12 @@
     <h1 class="text-3xl mb-6 mt-4">Challenge – Plasmonic Disc</h1>
 
     <article class="space-y-8 text-center">
-        <enhanced:img src={discImage} alt="" width="400" height="152" class="bg-surface-overlay mx-auto"/>
+        <enhanced:img src={discImage} alt="On the left is a 2D heatmap of the plasmonic disc. Large bands of yellow emanate from the blue plasmonic disc. On the right is a schematic of the mode converter - an ellipse with arrows marking its length and width." width="400" height="152" class="bg-surface-overlay mx-auto"/>
         <p>Confines the light to subwavelength dimensions.</p>
     </article>
 
     <section class="bg-surface-overlay p-6 rounded-xl shadow-md w-md max-w-full">
-        <p class="text-center pb-6">Measurements remaining: <span class="text-seagate">{maxAttempts - outputs.length}</span></p>
+        <p class="text-center pb-6" role="status">Measurements remaining: <span class="text-seagate">{maxAttempts - outputs.length}</span></p>
         <form class="flex flex-col mb-6" onsubmit={e => {
             e.preventDefault();
             doSomeMaths();
@@ -53,7 +53,7 @@
                     bind:value={width_value}
                     class="w-full rounded-lg bg-surface border-2 border-transparent text-primary p-3 focus:border-seagate invalid:border-red-900! outline-none transition-colors"
                     />
-                    <div class="input-range text-sm flex flex-row justify-around px-4 text-secondary mt-1">
+                    <div class="input-range text-sm flex flex-row justify-around px-4 text-secondary mt-1" aria-hidden="true">
                         <span>{width_min}</span>
                         <span>-</span>
                         <span>{width_max}</span>
@@ -76,13 +76,15 @@
                         <span>{length_max}</span>
                     </div>
                 </div>
+
+                <span class="sr-only">Results are stored in a table below.</span>
                 <input type="submit" hidden />
             </div>
             <button type="submit" class="text-xl font-bold bg-seagate p-4 rounded-lg text-center">Measure</button>
         </form>
 
     </section>
-    <table class="output-table text-center">
+    <table class="output-table text-center" aria-label="Measurement results">
         <thead>
             <tr class="border-y-2 border-surface-overlay">
                 <td>Width</td>
@@ -90,12 +92,12 @@
                 <td>Normalised P<sub>disc</sub></td>
             </tr>
         </thead>
-        <tbody>
+        <tbody role="log" aria-live="assertive">
             {#each outputs as output}
                 <tr>
-                    <td>{output[0]}</td>
-                    <td>{output[1]}</td>
-                    <td>{output[2]}</td>
+                    <td><span class="sr-only">Width:</span>{output[0]}</td>
+                    <td><span class="sr-only">Length:</span>{output[1]}</td>
+                    <td><span class="sr-only">Normalised P<sub>disc</sub>:</span>{output[2]}</td>
                 </tr>
             {/each}
         </tbody>

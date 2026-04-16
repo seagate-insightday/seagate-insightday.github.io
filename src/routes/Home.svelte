@@ -11,16 +11,16 @@
         </p>
         <ul class="flex flex-col gap-2 challenges-list">
             <li>
-                <span>Coupler Width</span><a href="#/challenge-1"><button>Go</button></a>
+                <a href="#/challenge-1"><span>Coupler Width</span><div class="go-button" aria-hidden="true">Go</div></a>
             </li>
             <li>
-                <span>Coupler Thickness</span><a href="#/challenge-2"><button>Go</button></a>
+                <a href="#/challenge-2"><span>Coupler Thickness</span><div class="go-button" aria-hidden="true">Go</div></a>
             </li>
             <li>
-                <span>Mode Converter</span><a href="#/challenge-3"><button>Go</button></a>
+                <a href="#/challenge-3"><span>Mode Converter</span><div class="go-button" aria-hidden="true">Go</div></a>
             </li>
             <li>
-                <span>Challenge – Plasmonic Disc</span><a href="#/challenge-4"><button>Go</button></a>
+                <a href="#/challenge-4"><span>Challenge – Plasmonic Disc</span><div class="go-button" aria-hidden="true">Go</div></a>
             </li>
         </ul>
 
@@ -51,17 +51,20 @@
         margin-right: 3rem;
     }
 
-    .challenges-list button {
-        height: 2.5rem;
-        width: 5rem;
+    .challenges-list a {
+        display: contents;
+    }
+
+    .challenges-list .go-button {
+        display: inline-block;
+        padding: 0.5rem 1.75rem;
         background: var(--color-seagate);
         border-radius: 0.5rem;
         transition: background-color 0.2s ease-in-out;
-        cursor: pointer;
     }
 
-    .challenges-list button:hover,
-    .challenges-list button:active {
+    .challenges-list .go-button:hover,
+    .challenges-list .go-button:active {
         background-color: var(--color-seagate-select);
     }
 </style>
